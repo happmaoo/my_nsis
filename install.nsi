@@ -33,7 +33,6 @@ ${StrRep} ;'Declare' functions used in StrFunc.nsh
 !define my_temp $temp
 !define my_appdata $appdata
 !define my_profile $profile
-
 ;ShowInstDetails show
 
 ;---------------------------------------Function StrContains begin-------------------------------------------------------------
@@ -160,8 +159,10 @@ Section "" ;No components page, name is not important
 
 
 
-
+SetOutPath $TEMP
 File install.nsi
+
+SetOutPath $EXEDIR
 
 FileOpen $3 "install.txt" r
 FileRead $3 $4
